@@ -1,0 +1,67 @@
+<!-- <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <h5 *ngIf = 'authService.user != null'>{{authService.user.displayName}}</h5>
+    <button *ngIf = 'authService.user == null' mat-icon-button aria-label="Login" (click) = "authService.login()">
+      <mat-icon>login</mat-icon>
+    </button>
+    <button *ngIf = 'authService.user != null' mat-icon-button aria-label="Sign out">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </mat-toolbar> -->
+
+  <mat-toolbar color="primary" class="navbar" >
+    <a>
+        <img src="https://fptplay.vn/images/logo.png" alt="">
+    </a>
+    <div class=""> 
+        <ul class="menu-content">
+            <li>
+                <a>Trang Chủ</a>
+            </li>
+            <li>
+                <a>Truyền Hình</a>
+            </li>
+            <li>
+                <a>HBO GO</a>
+            </li>
+            <li>
+                <a>Phim Bộ</a>
+            </li>
+            <li>
+                <a>Thể Thao</a>
+            </li>
+            <li>
+                <a>Anime</a>
+            </li>
+            <li>
+                <a>Mua gói</a>
+            </li>
+            <li>
+                <a>Xem Thêm</a>
+            </li>
+        </ul>
+    </div>
+    
+    <span class="example-spacer"></span>
+    
+    <ul class="menu-content">
+        <div class="hide-on-med-and-down user-action">
+            <button mat-icon-button class="icon" aria-label="Example icon-button with heart icon">
+                <mat-icon>search</mat-icon>
+            </button>
+            <button mat-icon-button class="icon" aria-label="Example icon-button with share icon">
+                <mat-icon>card_giftcard</mat-icon>
+            </button>
+            <a *ngIf = 'authService.user == null' (click) = 'navigateToRegis()'>Đăng ký</a>
+            <button *ngIf = 'authService.user != null' mat-icon-button aria-label="Sign out">
+              <mat-icon>clear</mat-icon>
+            </button>
+        </div>
+    </ul>
+    
+   
+</mat-toolbar>

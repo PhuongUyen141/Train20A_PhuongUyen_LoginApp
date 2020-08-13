@@ -1,0 +1,53 @@
+<!-- <form [formGroup] = 'nameGroup' (ngSubmit)="onSubmit()">
+    <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName = "firstNameControl">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput formControlName = "lastNameControl">
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" type="submit" [disabled] = "!nameGroup.valid">Submit</button>
+    <h1>Your first name is {{nameGroup.value.firstNameControl}}, last name is {{nameGroup.value.lastNameControl}}</h1>
+</form> -->
+
+<div class="body1">
+    <form [formGroup] = 'nameGroup' (ngSubmit)="onSubmit()">
+        <h3 style="font-size: 30px; text-align: center; font-family: 'SFProDisplay-Bold'; color: #fff !important; padding-top: 20px; margin: 0px 0 30px 0; font-weight: 600;">Đăng ký tài khoản</h3>
+        <div class="body-form">
+            <div class="body-form-content">
+                <p class="note-a">Vui lòng nhập số điện thoại</p>
+                <mat-form-field appearance="outline" margin= "0">
+                    <input matInput placeholder="Nhập số điện thoại" class="input-form">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline" margin= "0">
+                    <input matInput placeholder="Nhập mật khẩu" class="input-form">
+                </mat-form-field>
+                
+                <mat-form-field appearance="outline" margin= "0">
+                    <input matInput placeholder="Nhập lại mật khẩu" class="input-form">
+                </mat-form-field>
+                
+                    <p>Khi bấm vào nút đăng ký, bạn đã đồng ý với
+                        <a>Chính sách và quy định</a>
+                    </p>
+               
+                
+                <button class="" mat-flat-button type="submit" [disabled] = "!nameGroup.valid"  style = "background-color: #FF6400; color: #fff; width: 85%; cursor: pointer;">Đăng ký</button>
+
+                <p style="border-top: 1px solid #4A4A4A; margin-top:30px; margin-bottom: 0;">
+                    <span class="note1">hoặc</span>
+                </p>
+                <button mat-flat-button id="google-signin-button" type="submit" value="" class="button btn-gg"  style = "background-color: #DD4B39; color: #fff; width: 85%;" (click) = "authService.login()">
+                    Google
+                </button>
+            </div>
+        </div>
+   </form> 
+</div>
+
+
+
